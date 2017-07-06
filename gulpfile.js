@@ -45,7 +45,7 @@ gulp.task("style", function(){
 gulp.task("jade", function() {
     return gulp.src("templates/**/*.jade")
         .pipe(jade())
-        .pipe(gulp.dest("builds")); // указываем gulp куда положить скомпилированные HTML файлы
+        .pipe(gulp.dest("builds/")); // указываем gulp куда положить скомпилированные HTML файлы
 });
 
 /* Локальный сервер*/
