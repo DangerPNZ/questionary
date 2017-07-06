@@ -1,0 +1,24 @@
+{
+  "name": "questionary",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Тестовое задание для CSSSR",
+  "author": "Антон Меднов",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "gulp": "^3.9.1",
+    "jade": "^1.11.0",
+    "plumber": "^0.4.8",
+    "postcss": "^6.0.6",
+    "server": "^1.0.0-beta.1",
+    "stylus": "^0.54.5"
+  },
+  "scripts": {
+    "test": "editorconfig-cli",
+    "build": "gulp style",
+    "start": "gulp serve"
+  },
+  "engines": {
+    "node": "6.10"
+  }
+}
