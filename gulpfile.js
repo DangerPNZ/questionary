@@ -36,26 +36,30 @@ gulp.task("style", function(){
       ]})
     ]))
 
-    .pipe(gulp.dest("css"))
+    .pipe(gulp.dest("builds/css"))
     /* Отслеживание изменения стилей для лок. сервера** */
     .pipe(server.stream());
 });
    /* jade*/
 // чтобы запустить эту задачу, наберите в командной строке gulp jade
 gulp.task("jade", function() {
-    return gulp.src("templates/**/*.jade")
-        .pipe(jade())
-        .pipe(gulp.dest("builds/")); // указываем gulp куда положить скомпилированные HTML файлы
+  return gulp.src("templates/**/*.jade")
+    .pipe(jade())
+    .pipe(gulp.dest("builds/"))
+    .pipe(server.stream());
 });
 
 /* Локальный сервер*/
-gulp.task("serve", ["style"], function() {
+gulp.task("serve", function() {
   server.init({
-    server: "."
+    server: "./builds"
   });
 
   gulp.watch("stylus/**/*.styl", ["style"]);
-  /* Отслеживание изменения html для лок. сервера с перезагрузкой** */
-  gulp.watch("builds/*.html")
+  gulp.watch("templates/*.jade", ["jade"]);
+  /* При изменении в директориях срабатывает вотчер */
+  gulp.watch("templates/*.jade")
     .on("change", server.reload);
 });
+
+gulp.task("default", ["serve", "jade", "style"])

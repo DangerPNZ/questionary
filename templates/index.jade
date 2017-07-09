@@ -1,1 +1,136 @@
-.style
+doctype html
+html(lang="ru")
+
+head
+  meta(charset="UTF-8")
+  link(href="builds/css/style.css" rel="stylesheet")
+  link(href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet")
+  link(href="https://fonts.googleapis.com/css?family=PT+Sans:700&amp;subset=cyrillic" rel="stylesheet")
+  title Anketa
+
+body
+
+  main.container
+
+    header.main-header
+      .main-header__container.main-header__container--logo
+        a(href="http://csssr.ru/")
+          img(src="" width="" height="" alt="logo-csssr")
+      .main-header__container.main-header__container--heading
+        h1
+          img(src="" width="" height="" alt="Дело")
+
+    section.main-form
+      section.main-form__personal-data
+        .personal-data__line
+          label(for="full-name") Полное ФИО
+          input(type="text" id="full-name" value="Меднов Антон Павлович" placeholder="Иванов Иван Иванович")
+        .personal-data__line
+          label(for="dob") Год рождения
+          input(type="text" id="dob" value="1988" placeholder="1990")
+        .personal-data__line
+          label(for="location") Место жительства
+          input(type="text" id="location" value="г. Санкт-Петербург, Россия" placeholder="г. Иваново, Россия")
+        .personal-data__line
+          label(for="skype") Скайп
+          input(type="text" id="skype" value="" placeholder="ivanov")
+        .personal-data__line
+          label(for="email") Почта
+          input(type="email" id="email" value="dangerpnz@mail.ru" placeholder="ivanov@gmail.com")
+
+      section.my-skills
+        h2 Расскажите о себе чекбоксами
+        p Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантированно будете справляться.
+        ul.my-skills__skills-list
+          li.my-skills__skill
+            input(type="checkbox" id="bem" name="bem" checked)
+            label(for="bem") БЭМ/OOCS
+          li.my-skills__skill
+            input(type="checkbox" id="pug" name="pug" checked)
+            label(for="pug") Pug (Jade)
+          li.my-skills__skill
+            input(type="checkbox" id="preprocessors" name="preprocessors" checked)
+            label(for="preprocessors") Stylus/LESS/SASS
+          li.my-skills__skill
+            input(type="checkbox" id="svg" name="svg" checked)
+            label(for="svg") Работаю с SVG
+          li.my-skills__skill
+            input(type="checkbox" id="semantics" name="semantics" checked)
+            label(for="semantics") Верстаю семантично
+          li.my-skills__skill
+            input(type="checkbox" id="accessibility" name="accessibility")
+            label(for="accessibility") Acessibility (A11Y)
+          li.my-skills__skill
+            input(type="checkbox" id="js-es" name="js-es")
+            label(for="js-es") ES2015/ES2016
+
+          li.my-skills__skill
+            input(type="checkbox" id="automation" name="automation" checked)
+            label(for="automation") Gulp/GRUNT
+          li.my-skills__skill
+            input(type="checkbox" id="webpack" name="webpack")
+            label(for="webpack") Webpack
+          li.my-skills__skill
+            input(type="checkbox" id="webgl" name="webgl")
+            label(for="webgl") Дружу с WebGL
+          li.my-skills__skill
+            input(type="checkbox" id="jquery" name="jquery")
+            label(for="jquery") jQuery
+          li.my-skills__skill
+            input(type="checkbox" id="angular" name="angular")
+            label(for="angular") Знаю/изучаю Angular
+          li.my-skills__skill
+            input(type="checkbox" id="react" name="react")
+            label(for="react") Знаю/изучаю React
+          li.my-skills__skill
+            input(type="checkbox" id="nodejs" name="nodejs")
+            label(for="nodejs") Знаю/изучаю Node.js
+
+          li.my-skills__skill
+            input(type="checkbox" id="git" name="git" checked)
+            label(for="git") Использую Git
+          li.my-skills__skill
+            input(type="checkbox" id="accurate-eye" name="accurate-eye" checked)
+            label(for="accurate-eye") С глазомером
+            span.my-skills__crutch-proof всё
+            span.my-skills__crutch-proof ок
+          li.my-skills__skill
+            input(type="checkbox" id="blog-csssr" name="blog-csssr")
+            label(for="blog-csssr") Читаю
+            a(href="blog.csssr.ru") blog.csssr.ru
+          li.my-skills__skill
+            input(type="checkbox" id="sloth" name="sloth" checked)
+            label(for="sloth") Я ленивый(-ая)
+          li.my-skills__skill
+            input(type="checkbox" id="english" name="english")
+            label(for="english") У меня хороший английский
+
+      section.js-skill
+        h2 Уровень владения JavaScript
+        .js-skill__container
+          .skill__js-level.skill__js-level--none
+          .skill__js-level.skill__js-level--copy-paste
+          .skill__js-level.skill__js-level--edit
+          .skill__js-level.skill__js-level--pro
+
+      section.about-me
+        h2 Расскажите о себе словами
+        p Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
+        textarea(placeholder="Ну-ууу-уу... Ээээ...")
+
+      section.my-plans
+        h2 Какие у вас планы на будущее?
+        p Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+        .my-plans__variants
+          input(type="radio" name="plan" id="page-proofs")
+          label(for="page-proofs") Верстать
+          input(type="radio" name="plan" id="up-js" checked)
+          label(for="up-js") Прокачиваться в JS
+          input(type="radio" name="plan" id="management")
+          label(for="management") Менеджерство
+          input(type="radio" name="plan" id="other")
+          label(for="other") Другое
+
+      section.complet-date
+        label(for="date") Дата заполнения
+        input(type="text" value="" placeholder="01.01.2016")
