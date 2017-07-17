@@ -1,0 +1,43 @@
+.my-plans
+  padding-top 32px
+
+  h2
+    pt-sans-bold(24px, 49.83px, bold-text-color)
+
+  p
+    pt-sans(15px, 23px, p-color)
+    margin -4px 0 16px 0
+
+  label
+    pt-sans-bold(20px, 25px, #000)
+
+  input[type="radio"]
+    display none
+
+  input[type="radio"]+ label
+    position relative
+    margin-right 22px
+    padding-left 33px
+    cursor pointer
+
+    &::before
+      content ""
+      position absolute
+      top -9px
+      left -7px
+      width 41px
+      height 45px
+      background-image url("../img/sprites/spritesheet.png")
+      background-position -715px -112px
+
+  input[type="radio"]:checked+ label
+
+    &::after
+      content ""
+      position absolute
+      top 4px
+      left 2px
+      width 23px
+      height 27px
+      background-image url("../img/sprites/spritesheet.png")
+      background-position -308px -5px

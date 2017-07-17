@@ -1,0 +1,53 @@
+.personal-data
+  padding-top 18px
+
+.personal-data__line
+  display flex
+  margin-top 13px
+
+  label
+    pt-sans-bold(22.43px, 49.83px, bold-text-color)
+    margin-right 15px
+
+.main-form__candidate-data,
+.main-form__candidate-feedback
+  display: flex
+  flex-grow 1
+  position relative
+  overflow hidden
+
+  input
+    flex-grow 1
+    padding 0 18px
+    margin -27px 0 0 0
+    border none
+    outline none
+    courier-new(30px, 36px, input-text-color)
+    background transparent
+    z-index 100
+
+.main-form__candidate-data
+
+  &::before
+    content ""
+    display block
+    position absolute
+    top 7px
+    right -13px
+    width 659px
+    height 59px
+    background-image url("../img/sprites/spritesheet.png")
+    background-position -5px -131px
+
+.main-form__candidate-feedback
+
+  &::before
+    content ""
+    display block
+    position absolute
+    bottom 13px
+    right 0
+    width 700px
+    height 9px
+    background-image url("../img/sprites/spritesheet.png")
+    background-position -5px -112px

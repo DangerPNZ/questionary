@@ -1,0 +1,118 @@
+.sprite {
+    
+background-image: url(spritesheet.png);
+    
+background-repeat: no-repeat;
+    
+display: block;
+
+}
+
+
+.sprite-check {
+    
+width: 21px;
+    
+height: 27px;
+    
+background-position: -5px -5px;
+
+}
+
+
+.sprite-checkbox-empty {
+    
+width: 19px;
+    
+height: 18px;
+    
+background-position: -36px -5px;
+
+}
+
+
+.sprite-complet-date {
+    
+width: 206px;
+    
+height: 9px;
+    
+background-position: -65px -5px;
+}
+
+
+.sprite-fullwidth-area {
+    
+width: 774px;
+    
+height: 60px;
+    
+background-position: -5px -42px;
+
+}
+
+
+.sprite-long-area {
+    
+width: 700px;
+    
+height: 9px;
+    
+background-position: -5px -112px;
+
+}
+
+
+.sprite-pointer {
+    
+width: 17px;
+    
+height: 14px;
+    
+background-position: -281px -5px;
+
+}
+
+
+.sprite-radio-check {
+    
+width: 23px;
+    
+height: 27px;
+    
+background-position: -308px -5px;
+
+}
+
+
+.sprite-radio-empty {
+    
+width: 41px;
+    
+height: 45px;
+    
+background-position: -715px -112px;
+
+}
+
+
+.sprite-short-area {
+    
+width: 659px;
+    
+height: 59px;
+    
+background-position: -5px -131px;
+
+}
+
+
+.sprite-stamp {
+    
+width: 252px;
+    
+height: 106px;
+    
+background-position: -5px -200px;
+
+}

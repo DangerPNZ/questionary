@@ -1,0 +1,76 @@
+.my-skills
+  padding-top 44px
+
+  h2
+    pt-sans-bold(24px, 49.83px, bold-text-color)
+
+  p
+    pt-sans(15px, 23px, p-color)
+    margin-top -4px
+
+.my-skills__skills-list
+  display flex
+  flex-direction column
+  flex-wrap wrap
+  height 250px
+  padding-top 3px
+
+.my-skills__skill
+  padding-top 10px
+
+  label
+    pt-sans-bold(21px, 25px, #000)
+
+  label[for="bem"]
+    margin-right 120px
+
+  label[for="automation"]
+    margin-right 128px
+
+  label[for="blog-csssr"]
+    padding-right 5px
+
+  a
+    pt-sans-bold(21px, 25px, link-color)
+
+  input[type="checkbox"]
+    display none
+
+  input[type="checkbox"]+ label
+    position relative
+    padding-left 27px
+    cursor pointer
+
+    &::before
+      content ""
+      position absolute
+      top 5px
+      left 0
+      width 19px
+      height 18px
+      background-image url("../img/sprites/spritesheet.png")
+      background-position -36px -5px
+
+  input[type="checkbox"]:checked+ label
+
+    &::after
+      content ""
+      position absolute
+      bottom 5px
+      left 3px
+      width 21px
+      height 27px
+      background-image url("../img/sprites/spritesheet.png")
+      background-position -5px -5px
+
+.my-skills__crutch-proof
+  pt-sans-bold(21px, 25px, #000)
+  padding-left 5px
+
+.my-skills__crutch-proof--first
+  position relative
+  top 2px
+
+.my-skills__crutch-proof--last
+  position relative
+  top 3px

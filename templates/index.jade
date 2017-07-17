@@ -3,7 +3,7 @@ html(lang="ru")
 
 head
   meta(charset="UTF-8")
-  link(href="builds/css/style.css" rel="stylesheet")
+  link(href="css/style.css" rel="stylesheet")
   link(href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet")
   link(href="https://fonts.googleapis.com/css?family=PT+Sans:700&amp;subset=cyrillic" rel="stylesheet")
   title Anketa
@@ -13,30 +13,35 @@ body
   main.container
 
     header.main-header
-      .main-header__container.main-header__container--logo
+      .main-header__container-logo
         a(href="http://csssr.ru/")
-          img(src="" width="" height="" alt="logo-csssr")
-      .main-header__container.main-header__container--heading
+          img(src="./img/logo.png" width="154px" height="52px" alt="logo-csssr")
+      .main-header__container-heading
         h1
-          img(src="" width="" height="" alt="Дело")
+          img(src="./img/heading.png" width="221px" height="118px" alt="Дело")
 
     section.main-form
-      section.main-form__personal-data
+      section.personal-data
         .personal-data__line
           label(for="full-name") Полное ФИО
-          input(type="text" id="full-name" value="Меднов Антон Павлович" placeholder="Иванов Иван Иванович")
+          .main-form__candidate-data
+            input(type="text" id="full-name" value="Меднов Антон Павлович" placeholder="Иванов Иван Иванович")
         .personal-data__line
           label(for="dob") Год рождения
-          input(type="text" id="dob" value="1988" placeholder="1990")
+          .main-form__candidate-data
+            input(type="text" id="dob" value="1988" placeholder="1990")
         .personal-data__line
           label(for="location") Место жительства
-          input(type="text" id="location" value="г. Санкт-Петербург, Россия" placeholder="г. Иваново, Россия")
+          .main-form__candidate-data
+            input(type="text" id="location" value="г. Санкт-Петербург, Россия" placeholder="г. Иваново, Россия")
         .personal-data__line
           label(for="skype") Скайп
-          input(type="text" id="skype" value="" placeholder="ivanov")
+          .main-form__candidate-feedback
+            input(type="text" id="skype" value="" placeholder="ivanov")
         .personal-data__line
           label(for="email") Почта
-          input(type="email" id="email" value="dangerpnz@mail.ru" placeholder="ivanov@gmail.com")
+          .main-form__candidate-feedback
+            input(type="email" id="email" value="dangerpnz@mail.ru" placeholder="ivanov@gmail.com")
 
       section.my-skills
         h2 Расскажите о себе чекбоксами
@@ -44,7 +49,7 @@ body
         ul.my-skills__skills-list
           li.my-skills__skill
             input(type="checkbox" id="bem" name="bem" checked)
-            label(for="bem") БЭМ/OOCS
+            label(for="bem") БЭМ/OOCSS
           li.my-skills__skill
             input(type="checkbox" id="pug" name="pug" checked)
             label(for="pug") Pug (Jade)
@@ -92,8 +97,8 @@ body
           li.my-skills__skill
             input(type="checkbox" id="accurate-eye" name="accurate-eye" checked)
             label(for="accurate-eye") С глазомером
-            span.my-skills__crutch-proof всё
-            span.my-skills__crutch-proof ок
+            span.my-skills__crutch-proof.my-skills__crutch-proof--first всё
+            span.my-skills__crutch-proof.my-skills__crutch-proof--last ок
           li.my-skills__skill
             input(type="checkbox" id="blog-csssr" name="blog-csssr")
             label(for="blog-csssr") Читаю
@@ -108,15 +113,23 @@ body
       section.js-skill
         h2 Уровень владения JavaScript
         .js-skill__container
-          .skill__js-level.skill__js-level--none
-          .skill__js-level.skill__js-level--copy-paste
-          .skill__js-level.skill__js-level--edit
-          .skill__js-level.skill__js-level--pro
+          .js-skill__js-level.skill__js-level--none
+            input(type="radio" name="js-skill" id="js-level-none")
+            label(for="js-level-none") Не владею
+          .js-skill__js-level.skill__js-level--copy-paste
+            input(type="radio" name="js-skill" id="js-level-copy-paste" checked)
+            label(for="js-level-copy-paste") Использую готовые решения
+          .js-skill__js-level.skill__js-level--edit
+            input(type="radio" name="js-skill" id="js-level-edit")
+            label(for="js-level-edit") Использую готовые решения и умею их переделывать
+          .js-skill__js-level.skill__js-level--pro
+            input(type="radio" name="js-skill" id="js-level-pro")
+            label(for="js-level-pro") Пишу сложный JS с нуля
 
       section.about-me
         h2 Расскажите о себе словами
         p Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
-        textarea(placeholder="Ну-ууу-уу... Ээээ...")
+        textarea(placeholder="Ну-ууу-уу... Ээээ..." wrap="soft" rows="3")
 
       section.my-plans
         h2 Какие у вас планы на будущее?
@@ -133,4 +146,5 @@ body
 
       section.complet-date
         label(for="date") Дата заполнения
-        input(type="text" value="" placeholder="01.01.2016")
+        .complet-date__field-container
+          input(type="text" id="date" name="date" value="" placeholder="01.01.2016")

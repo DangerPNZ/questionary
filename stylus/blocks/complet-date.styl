@@ -1,0 +1,30 @@
+.complet-date
+  display flex
+  padding 86px 0 60px 0
+
+  label
+    pt-sans-bold(22.43px, 49.83px, bold-text-color)
+
+  input
+    width 206px
+    margin-left 17px
+    padding 0 0 10px 10px
+    courier-new(30px, 36px, input-text-color)
+    border none
+    outline none
+    background transparent
+
+  .complet-date__field-container
+    position relative
+    top -9px
+
+    &::before
+      content ""
+      display block
+      position absolute
+      bottom 5px
+      right 0
+      width 206px
+      height 9px
+      background-image url("../img/sprites/spritesheet.png")
+      background-position -65px -5px

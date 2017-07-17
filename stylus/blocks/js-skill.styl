@@ -1,0 +1,148 @@
+.js-skill
+  padding-top 46px
+
+  h2
+    pt-sans-bold(24px, 49.83px, bold-text-color)
+
+.js-skill__container
+  display flex
+  position relative
+  padding-top 12px
+
+  &::before
+    content ""
+    position absolute
+    top 4px
+    left -2px
+    width 774px
+    height 60px
+    background-image url("../img/sprites/spritesheet.png")
+    background-position -6px -43px
+    z-index 10
+
+.js-skill__js-level
+  display flex
+  flex-direction column
+  position relative
+  z-index 50
+
+  input
+    display none
+
+  label
+    margin-top 30px
+    padding-top 20px
+    pt-sans-bold(13px, 20px, bold-text-color)
+
+.skill__js-level--none
+  width 80px
+
+  input[type="radio"]+ label
+    position relative
+    cursor pointer
+    &::before
+      content ""
+      display block
+      width 90px
+      height 45px
+      position absolute
+      top -27px
+      left -10px
+      background url("../img/vertical-long.png") no-repeat 11px 16px
+
+  input[type="radio"]:checked+ label
+    &::after
+      content ""
+      display block
+      width 17px
+      height 14px
+      position absolute
+      top -29px
+      left -6px
+      background-image url("../img/sprites/spritesheet.png")
+      background-position -281px -5px
+
+.skill__js-level--copy-paste
+  width 185px
+
+  input[type="radio"]+ label
+    position relative
+    cursor pointer
+    &::before
+      content ""
+      display block
+      width 185px
+      height 45px
+      position absolute
+      top -27px
+      left 2px
+      background url("../img/vertical-short.png") no-repeat 60px 17px
+
+  input[type="radio"]:checked+ label
+    &::after
+      content ""
+      display block
+      width 17px
+      height 14px
+      position absolute
+      top -29px
+      left 62px
+      background-image url("../img/sprites/spritesheet.png")
+      background-position -281px -5px
+
+.skill__js-level--edit
+  width 315px
+
+  input[type="radio"]+ label
+    position relative
+    cursor pointer
+    &::before
+      content ""
+      display block
+      width 315px
+      height 45px
+      position absolute
+      top -27px
+      left 2px
+      background url("../img/vertical-short.png") no-repeat 100px 17px
+
+  input[type="radio"]:checked+ label
+    &::after
+      content ""
+      display block
+      width 17px
+      height 14px
+      position absolute
+      top -29px
+      left 102px
+      background-image url("../img/sprites/spritesheet.png")
+      background-position -281px -5px
+
+.skill__js-level--pro
+  flex-grow 1
+  align-items flex-end
+
+  input[type="radio"]+ label
+    position relative
+    cursor pointer
+    &::before
+      content ""
+      display block
+      width 196px
+      height 45px
+      position absolute
+      top -27px
+      left -47px
+      background url("../img/vertical-long.png") no-repeat 100% 16px
+
+  input[type="radio"]:checked+ label
+    &::after
+      content ""
+      display block
+      width 17px
+      height 14px
+      position absolute
+      top -29px
+      right -5px
+      background-image url("../img/sprites/spritesheet.png")
+      background-position -281px -5px
