@@ -227,8 +227,7 @@ body {
   right: -61px;
   width: 252px;
   height: 106px;
-  background-image: url("../img/sprites/spritesheet.png");
-  background-position: -5px -200px;
+  background: url("../img/sprites/spritesheet.png") -5px -200px;
 }
 .main-header__container-logo {
   width: 256px;
@@ -287,8 +286,7 @@ body {
   right: -13px;
   width: 659px;
   height: 59px;
-  background-image: url("../img/sprites/spritesheet.png");
-  background-position: -5px -131px;
+  background: url("../img/sprites/spritesheet.png") -5px -131px;
 }
 .main-form__candidate-feedback::before {
   content: "";
@@ -298,8 +296,7 @@ body {
   right: 0;
   width: 700px;
   height: 9px;
-  background-image: url("../img/sprites/spritesheet.png");
-  background-position: -5px -112px;
+  background: url("../img/sprites/spritesheet.png") -5px -112px;
 }
 .my-skills {
   padding-top: 44px;
@@ -337,7 +334,7 @@ body {
   flex-wrap: wrap;
   padding-top: 10px;
 }
-.my-skills__skill:last-child {
+.my-skills__skill--wrap {
   width: 180px;
 }
 .my-skills__skill label {
@@ -380,8 +377,7 @@ body {
   left: 0;
   width: 19px;
   height: 18px;
-  background-image: url("../img/sprites/spritesheet.png");
-  background-position: -36px -5px;
+  background: url("../img/sprites/spritesheet.png") -36px -5px;
 }
 .my-skills__skill input[type="checkbox"]:checked+ label::after {
   content: "";
@@ -390,8 +386,7 @@ body {
   left: 3px;
   width: 21px;
   height: 27px;
-  background-image: url("../img/sprites/spritesheet.png");
-  background-position: -5px -5px;
+  background: url("../img/sprites/spritesheet.png") -5px -5px;
 }
 .my-skills__crutch-proof {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -434,8 +429,7 @@ body {
   left: -2px;
   width: 774px;
   height: 60px;
-  background-image: url("../img/sprites/spritesheet.png");
-  background-position: -6px -43px;
+  background: url("../img/sprites/spritesheet.png") -6px -43px;
   z-index: 10;
 }
 .js-skill__js-level {
@@ -493,8 +487,7 @@ body {
   position: absolute;
   top: -29px;
   left: -6px;
-  background-image: url("../img/sprites/spritesheet.png");
-  background-position: -281px -5px;
+  background: url("../img/sprites/spritesheet.png") -281px -5px;
 }
 .skill__js-level--copy-paste {
   width: 185px;
@@ -521,8 +514,7 @@ body {
   position: absolute;
   top: -29px;
   left: -4px;
-  background-image: url("../img/sprites/spritesheet.png");
-  background-position: -281px -5px;
+  background: url("../img/sprites/spritesheet.png") -281px -5px;
 }
 .skill__js-level--edit {
   width: 315px;
@@ -549,8 +541,7 @@ body {
   position: absolute;
   top: -29px;
   left: -6px;
-  background-image: url("../img/sprites/spritesheet.png");
-  background-position: -281px -5px;
+  background: url("../img/sprites/spritesheet.png") -281px -5px;
 }
 .skill__js-level--pro {
   -webkit-box-flex: 1;
@@ -580,8 +571,7 @@ body {
   position: absolute;
   top: -29px;
   right: -5px;
-  background-image: url("../img/sprites/spritesheet.png");
-  background-position: -281px -5px;
+  background: url("../img/sprites/spritesheet.png") -281px -5px;
 }
 .about-me {
   display: -webkit-box;
@@ -664,8 +654,7 @@ body {
   left: -7px;
   width: 41px;
   height: 45px;
-  background-image: url("../img/sprites/spritesheet.png");
-  background-position: -715px -112px;
+  background: url("../img/sprites/spritesheet.png") -715px -112px;
 }
 .my-plans input[type="radio"]:checked+ label::after {
   content: "";
@@ -674,8 +663,7 @@ body {
   left: 2px;
   width: 23px;
   height: 27px;
-  background-image: url("../img/sprites/spritesheet.png");
-  background-position: -308px -5px;
+  background: url("../img/sprites/spritesheet.png") -308px -5px;
 }
 .complet-date {
   display: -webkit-box;
@@ -716,6 +704,5 @@ body {
   right: 0;
   width: 206px;
   height: 9px;
-  background-image: url("../img/sprites/spritesheet.png");
-  background-position: -65px -5px;
+  background: url("../img/sprites/spritesheet.png") -65px -5px;
 }

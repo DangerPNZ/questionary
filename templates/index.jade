@@ -20,7 +20,7 @@ body
         h1
           img(src="./img/heading.png" width="221px" height="118px" alt="Дело")
 
-    section.main-form
+    form(action="#" class="main-form")
       section.personal-data
         .personal-data__line
           label(for="full-name") Полное ФИО
@@ -79,7 +79,7 @@ body
             input(type="checkbox" id="webgl" name="webgl")
             label(for="webgl") Дружу с WebGL
           li.my-skills__skill
-            input(type="checkbox" id="jquery" name="jquery")
+            input(type="checkbox" id="jquery" name="jquery" checked)
             label(for="jquery") jQuery
           li.my-skills__skill
             input(type="checkbox" id="angular" name="angular")
@@ -106,7 +106,7 @@ body
           li.my-skills__skill
             input(type="checkbox" id="sloth" name="sloth" checked)
             label(for="sloth") Я ленивый(-ая)
-          li.my-skills__skill
+          li.my-skills__skill.my-skills__skill--wrap
             input(type="checkbox" id="english" name="english")
             label(for="english") У меня хороший английский
 
