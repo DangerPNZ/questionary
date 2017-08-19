@@ -6,6 +6,7 @@ head
   link(href="css/style.css" rel="stylesheet")
   link(href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet")
   link(href="https://fonts.googleapis.com/css?family=PT+Sans:700&amp;subset=cyrillic" rel="stylesheet")
+  script(src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
   title Anketa
 
 body
@@ -37,7 +38,7 @@ body
         .personal-data__line
           label(for="skype") Скайп
           .main-form__candidate-feedback
-            input(type="text" id="skype" value="" placeholder="ivanov")
+            input(type="text" id="skype" value="terpinkode" placeholder="ivanov")
         .personal-data__line
           label(for="email") Почта
           .main-form__candidate-feedback
@@ -129,7 +130,9 @@ body
       section.about-me
         h2 Расскажите о себе словами
         p Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
-        textarea(placeholder="Ну-ууу-уу... Ээээ..." wrap="soft" rows="3")
+        textarea(id="about-me")
+        div(id="placeholder" class="placeholder") Ну-ууу-уу...
+          #[br] Ээээ...
 
       section.my-plans
         h2 Какие у вас планы на будущее?
@@ -148,3 +151,5 @@ body
         label(for="date") Дата заполнения
         .complet-date__field-container
           input(type="text" id="date" name="date" value="" placeholder="01.01.2016")
+
+  script(src="./js/script.js")

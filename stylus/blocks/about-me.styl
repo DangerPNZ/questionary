@@ -1,6 +1,7 @@
 .about-me
   display flex
   flex-direction column
+  position relative
   padding-top 14px
 
   h2
@@ -11,8 +12,35 @@
     margin 0 0 22px 0
 
   textarea
+    padding 0 5px
     courier-new(30px, 60px, input-text-color)
     border none
     outline none
-    resize none
     background transparent url("../img/fullwidth-area.png") -6px 22px
+    z-index 10
+    width 100%
+    min-height 180px
+
+  .placeholder
+    position absolute
+    top 130px
+    left -11px
+    padding 0 15px
+    courier-new(30px, 60px, input-text-color)
+    color #a9a9a9
+    z-index 0
+
+// для jquery
+
+  .noscroll
+    overflow hidden
+
+  .hiddendiv
+    padding 0 5px
+    display none
+    white-space pre-wrap
+    width 100%
+    min-height 180px
+    courier-new(30px, 60px, input-text-color)
+    word-wrap break-word
+    z-index 20

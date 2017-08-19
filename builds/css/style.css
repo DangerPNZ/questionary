@@ -579,6 +579,7 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
+  position: relative;
   padding-top: 14px;
 }
 .about-me h2 {
@@ -599,6 +600,7 @@ body {
   margin: 0 0 22px 0;
 }
 .about-me textarea {
+  padding: 0 5px;
   font-family: "Courier New Regular", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
@@ -607,11 +609,45 @@ body {
   color: #231f20;
   border: none;
   outline: none;
-  resize: none;
   background: transparent url("../img/fullwidth-area.png") -6px 22px;
+  z-index: 10;
+  width: 100%;
+  min-height: 180px;
+}
+.about-me .placeholder {
+  position: absolute;
+  top: 130px;
+  left: -11px;
+  padding: 0 15px;
+  font-family: "Courier New Regular", "Courier", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 60px;
+  color: #231f20;
+  color: #a9a9a9;
+  z-index: 0;
+}
+.noscroll {
+  overflow: hidden;
+}
+.hiddendiv {
+  padding: 0 5px;
+  display: none;
+  white-space: pre-wrap;
+  width: 100%;
+  min-height: 180px;
+  font-family: "Courier New Regular", "Courier", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 60px;
+  color: #231f20;
+  word-wrap: break-word;
+  z-index: 20;
 }
 .my-plans {
-  padding-top: 32px;
+  padding-top: 36px;
 }
 .my-plans h2 {
   font-family: "PT Sans", "Arial", sans-serif;
