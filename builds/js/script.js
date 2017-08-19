@@ -1,26 +1,26 @@
-$(document).ready(function() {
+jQuery(document).ready(function() {
   // Двухстрочный placeholder
-  $(document).on('input', '#about-me', function () {
-          if ($('#about-me').val()) {
-              $('#placeholder').hide();
+  jQuery(document).on('input', '#about-me', function () {
+          if (jQuery('#about-me').val()) {
+              jQuery('#placeholder').hide();
           } else {
-              $('#placeholder').show();
+              jQuery('#placeholder').show();
           }
   })
 
 
-  $(function() {
+  jQuery(function() {
 // описываем поле ввода (тег textarea)
-	var messagearea = $('#about-me'),
+	var messagearea = jQuery('#about-me'),
 // создаем элемент-клон
-	hiddenDiv = $(document.createElement('div')),
+	hiddenDiv = jQuery(document.createElement('div')),
 	content = null;
 // добавляем класс .noscroll элементу #about-me(эл-т textarea)
 	messagearea.addClass('noscroll');
 // добавляем класс .hiddendiv элементу-клону
 	hiddenDiv.addClass('hiddendiv');
 //добавляем элемент-клон в тег  body
-	$('body').append(hiddenDiv);
+	jQuery('body').append(hiddenDiv);
 //связываем событие keyup (пользователь отпускает
 //клавишу клавиатуры)
 //c функцией. Все приминительно к элементу textarea#about-me
